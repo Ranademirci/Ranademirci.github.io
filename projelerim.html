@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <nav>
+        <h1>R.D.</h1>
+       <ul>
+            <li><a href="index.html">Ana Sayfa</a></li> 
+            <li><a href="hakkimda.html">Hakkımda</a></li> 
+        </ul>
+    </nav>
+
+   <div class="project-section">
+    <div class="filter-buttons">
+        <button id="all-projects" onclick="filterProjects('all')"><strong>Tüm Projeler</strong></button>
+        <button id="liked-projects" onclick="filterProjects('liked')"><strong>En Beğenilen Projeler</strong></button>
+    </div>
+
+    <div class="project-container" id="projects">
+        <div class="project-box" data-order="1" data-liked="true" 
+             onclick="openModal('araç.jpg', 'Araç Servis ve Bakım Otomasyonu', 'Araç Servis ve Bakım Otomasyonu,müşteri ve araç bilgilerini yönetme, randevu planlama, garanti takibi, rapor oluşturma ve envanter ile iletişim platformlarıyla entegrasyon sağlayarak araç servis operasyonlarını kolaylaştıran bir sistemdir.C++ dilinde yazılmıştır.')">
+            <img src="araç.jpg" alt="Project 1" class="project-image">
+            <div class="project-name">
+                <h2>Araç Servis ve Bakım Otomasyonu</h2>
+            </div>
+        </div>
+
+        <div class="project-box" data-order="2" data-liked="false" 
+             onclick="openModal('kitap.jpg', 'Kütüphane Yönetim Sistemi', 'Kütüphane Yönetim Sistemi, kitap ödünç alma ve iade işlemlerini yönetme, kullanıcı kayıtlarını takip etme, kitap envanterini düzenleme ve erişim sağlama işlevlerini kolaylaştıran bir sistemdir. C# dilinde yazılmıştır.')">
+            <img src="kitap.jpg" alt="Project 2" class="project-image">
+            <div class="project-name">
+                <h2>Kütüphane Yönetim Sistemi</h2>
+            </div>
+        </div>
+
+        <div class="project-box" data-order="3" data-liked="true" 
+             onclick="openModal('grup.jpg', 'Çalışma Grubu Koordinatörü', 'Çalışma Grubu Koordinatörü, çalışma gruplarını organize eden, oturumları planlayan, kaynakları paylaşan ve grup tartışmalarını kolaylaştırarak işbirlikçi öğrenmeyi destekleyen bir sistemdir. Java dilinde yazılmıştır')">
+            <img src="grup.jpg" alt="Project 3" class="project-image">
+            <div class="project-name">
+                <h2>Çalışma Grubu Koordinatörü</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-image" src="" alt="Modal Image">
+        <h2 id="modalHeader" class="modal-header"></h2>
+        <p id="modalDescription" class="modal-description"></p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
